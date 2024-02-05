@@ -6,9 +6,11 @@ import com.tora.tutorialmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -44,7 +46,29 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get(),
                         ModBlocks.SAPPHIRE_BLOCK.get(),
                         ModBlocks.RAW_SAPPHIRE_BLOCK.get(),
-                        ModBlocks.SOUND_BLOCK.get()
+                        ModBlocks.SOUND_BLOCK.get(),
+
+                        ModBlocks.SAPPHIRE_STAIRS.get(),
+                        ModBlocks.SAPPHIRE_SLAB.get(),
+
+                        ModBlocks.SAPPHIRE_BUTTON.get(),
+                        ModBlocks.SAPPHIRE_PRESSURE_PLATE.get(),
+
+                        ModBlocks.SAPPHIRE_FENCE.get(),
+                        ModBlocks.SAPPHIRE_FENCE_GATE.get(),
+                        ModBlocks.SAPPHIRE_WALL.get(),
+
+                        ModBlocks.SAPPHIRE_DOOR.get(),
+                        ModBlocks.SAPPHIRE_TRAPDOOR.get()
                 );
+
+        this.tag(BlockTags.FENCES)
+                .add(ModBlocks.SAPPHIRE_FENCE.get());
+
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.SAPPHIRE_FENCE_GATE.get());
+
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.SAPPHIRE_WALL.get());
     }
 }
